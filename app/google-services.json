@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "216528759585",
+    "firebase_url": "https://robot-jardinero-default-rtdb.firebaseio.com",
+    "project_id": "robot-jardinero",
+    "storage_bucket": "robot-jardinero.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216528759585:android:d124c75cda3c5bf15dec60",
+        "android_client_info": {
+          "package_name": "com.example.robotjardinero"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_o4gU1EHoHnDZnMgnmu1fybJ-sJsEeS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
