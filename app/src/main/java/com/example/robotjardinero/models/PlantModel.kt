@@ -1,5 +1,5 @@
 package com.example.robotjardinero.models
-
+// PlantModel.kt
 data class PlantModel(
     var id: String = "",
     var name: String = "",
