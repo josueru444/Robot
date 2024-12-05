@@ -1,0 +1,4 @@
+/home/pce/Android/Sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /home/pce/StudioProjects/RobotJardineroV2/sdk/.cxx/Debug/6tu6h131/x86_64 \
+  opencv_jni_shared

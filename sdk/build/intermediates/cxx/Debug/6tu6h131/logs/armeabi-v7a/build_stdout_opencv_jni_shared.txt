@@ -1,0 +1,2 @@
+ninja: Entering directory `/home/pce/StudioProjects/RobotJardineroV2/sdk/.cxx/Debug/6tu6h131/armeabi-v7a'
+ninja: no work to do.
