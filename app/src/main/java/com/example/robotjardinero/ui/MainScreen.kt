@@ -21,6 +21,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.robotjardinero.Routes
 import com.example.robotjardinero.db.RealtimeManager
+import com.example.robotjardinero.ui.camera.CameraPage
 import com.example.robotjardinero.ui.forms.AddPlant
 import com.example.robotjardinero.ui.home.HomePage
 
@@ -75,6 +76,9 @@ fun MainScreen() {
             }
             composable(Routes.addPlantPage) {
                 AddPlant(navigation = navController, realTimeManager = realTimeManager)
+            }
+            composable(Routes.cameraPage) {
+                CameraPage(navController = navController)
             }
 
         }

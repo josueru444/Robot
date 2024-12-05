@@ -15,21 +15,35 @@ class RealtimeManager(context: Context) {
         }
     }
 
+    fun updatePlant(idPlant: String, plant: PlantModel) {
+        databaseReference.child(idPlant).setValue(plant)
+    }
+
     fun deletePlant(idPlant: String) {
         databaseReference.child(idPlant).removeValue()
     }
 
-    fun getPlants(onSuccess: (List<String>) -> Unit, onFailure: (Exception) -> Unit) {
+    fun getPlants(onSuccess: (List<PlantModel>) -> Unit, onFailure: (Exception) -> Unit) {
         databaseReference.get().addOnSuccessListener { snapshot ->
-            val plantList = mutableListOf<String>()
+            val plantList = mutableListOf<PlantModel>()
             for (plantSnapshot in snapshot.children) {
                 val plant = plantSnapshot.getValue(PlantModel::class.java)
                 if (plant != null) {
                     // Agregamos la planta al listado como un String
-                    plantList.add("Name: ${plant.name}, Temp: ${plant.temperature}, Humidity: ${plant.humidity}")
+                    val plantId = plantSnapshot.key
+
+                    plantList.add(
+                        PlantModel(
+                            id = plantId ?: "",
+                            name = plant.name,
+                            temperature = plant.temperature,
+                            connected = plant.connected,
+                            humidity = plant.humidity
+                        )
+                    )
                 }
             }
-            onSuccess(plantList) // Retorna la lista de plantas en formato String
+            onSuccess(plantList)
         }.addOnFailureListener { exception ->
             onFailure(exception) // En caso de error, pasa el error
         }

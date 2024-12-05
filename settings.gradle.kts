@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Robot Jardinero"
 include(":app")
+include(":sdk")
